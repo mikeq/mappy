@@ -1,0 +1,27 @@
+{
+  "name": "mappy",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "leaflet": "^1.2.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-fns": "^1.2.0",
+    "react-leaflet": "^1.7.5",
+    "react-props": "^0.0.3",
+    "react-scripts": "1.0.17"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  }
+}
