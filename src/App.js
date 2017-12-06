@@ -5,9 +5,11 @@ import './App.css';
 
 
 class Tile extends Component {
+  accessToken = 'pk.eyJ1IjoibWlrZXEiLCJhIjoiY2phY25hZHI5MTV3MzJxcDgyZjlrd2g3ayJ9.anMqsp6K3HdmZJHRvrhEVg';
   state = {
-    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    //url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    url: `https://api.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=${this.accessToken}`,
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
   };
 
   render() {
